@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 640" role="img" aria-labelledby="prev-title prev-desc">
+  <title id="prev-title">2D plan preview for 2-Bed Home</title>
+  <desc id="prev-desc">Plan detail window with top-down preview of the 2-Bed Home sample, Walk Through button, and room list.</desc>
+  <defs>
+    <linearGradient id="prevGlass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f5f6f8" stop-opacity="0.97"/>
+      <stop offset="100%" stop-color="#e6e9ee" stop-opacity="0.95"/>
+    </linearGradient>
+    <filter id="prevShadow" x="-6%" y="-6%" width="112%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#1a1c1e" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect width="880" height="640" fill="#c5cad2"/>
+  <rect x="0" y="500" width="880" height="140" fill="#b0b6c0"/>
+  <path d="M0 500 L260 390 H620 L880 500" fill="#d2d6dd"/>
+
+  <g filter="url(#prevShadow)">
+    <rect x="40" y="28" width="800" height="584" rx="26" fill="url(#prevGlass)" stroke="#9aa3ae" stroke-width="1.25"/>
+  </g>
+
+  <circle cx="70" cy="56" r="5.5" fill="#c45c4a"/>
+  <circle cx="90" cy="56" r="5.5" fill="#c9a227"/>
+  <circle cx="110" cy="56" r="5.5" fill="#5a9a6a"/>
+  <text x="440" y="61" text-anchor="middle" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#3a4048">2-Bed Home</text>
+
+  <text x="72" y="108" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="26" font-weight="600" fill="#1a1c1e">2-Bed Home</text>
+  <rect x="236" y="90" width="62" height="20" rx="10" fill="#e8a05a" fill-opacity="0.35"/>
+  <text x="267" y="104" text-anchor="middle" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="10" font-weight="700" fill="#7a3d10">SAMPLE</text>
+
+  <text x="72" y="132" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="13" fill="#5a6068">SAMPLE design — living, kitchen, dining, hall, two bedrooms, and bath. Approximate dimensions only.</text>
+  <text x="72" y="154" font-family="SF Mono, Menlo, Consolas, monospace" font-size="12" fill="#5a6068">≈ 10.0 × 8.0 m footprint</text>
+
+  <rect x="72" y="168" width="736" height="30" rx="9" fill="#d9dde3" opacity="0.85"/>
+  <text x="90" y="187" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#5a6068">Visualization only — dimensions are approximate, not survey-accurate.</text>
+
+  <!-- 2D preview canvas -->
+  <rect x="72" y="214" width="520" height="300" rx="14" fill="#eef1f4" stroke="#b8bec6"/>
+
+  <!-- Scale: 10m x 8m into ~480x240 area, origin top-left of plan area at (92, 234) -->
+  <!-- Living 5x4.5 @0,0 -->
+  <rect x="92" y="234" width="200" height="135" fill="#b9d0cb" fill-opacity="0.55" stroke="#3d5c57" stroke-width="2"/>
+  <text x="192" y="292" text-anchor="middle" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="11" font-weight="600" fill="#1a1c1e">Living</text>
+  <text x="192" y="308" text-anchor="middle" font-family="SF Mono, Menlo, Consolas, monospace" font-size="9" fill="#5a6068">≈ 5.0 × 4.5 m</text>
+  <!-- Kitchen 3.5x3 @5,0 -->
+  <rect x="292" y="234" width="140" height="90" fill="#b9d0cb" fill-opacity="0.55" stroke="#3d5c57" stroke-width="2"/>
+  <text x="362" y="276" text-anchor="middle" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="11" font-weight="600" fill="#1a1c1e">Kitchen</text>
+  <text x="362" y="292" text-anchor="middle" font-family="SF Mono, Menlo, Consolas, monospace" font-size="9" fill="#5a6068">≈ 3.5 × 3.0 m</text>
+  <!-- Dining 3.5x2.5 @5,3 -->
+  <rect x="292" y="324" width="140" height="75" fill="#b9d0cb" fill-opacity="0.55" stroke="#3d5c57" stroke-width="2"/>
+  <text x="362" y="358" text-anchor="middle" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="11" font-weight="600" fill="#1a1c1e">Dining</text>
+  <text x="362" y="374" text-anchor="middle" font-family="SF Mono, Menlo, Consolas, monospace" font-size="9" fill="#5a6068">≈ 3.5 × 2.5 m</text>
+  <!-- Hall 2x3.5 @0,4.5 -->
+  <rect x="92" y="369" width="80" height="105" fill="#b9d0cb" fill-opacity="0.55" stroke="#3d5c57" stroke-width="2"/>
+  <text x="132" y="424" text-anchor="middle" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="10" font-weight="600" fill="#1a1c1e">Hall</text>
+  <!-- Bedroom 1 4x3.5 @2,4.5 -->
+  <rect x="172" y="369" width="160" height="105" fill="#b9d0cb" fill-opacity="0.55" stroke="#3d5c57" stroke-width="2"/>
+  <text x="252" y="412" text-anchor="middle" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="11" font-weight="600" fill="#1a1c1e">Bedroom 1</text>
+  <text x="252" y="428" text-anchor="middle" font-family="SF Mono, Menlo, Consolas, monospace" font-size="9" fill="#5a6068">≈ 4.0 × 3.5 m</text>
+  <!-- Bedroom 2 3.5x2.5 @6,5.5 -->
+  <rect x="332" y="399" width="140" height="75" fill="#b9d0cb" fill-opacity="0.55" stroke="#3d5c57" stroke-width="2"/>
+  <text x="402" y="432" text-anchor="middle" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="11" font-weight="600" fill="#1a1c1e">Bedroom 2</text>
+  <text x="402" y="448" text-anchor="middle" font-family="SF Mono, Menlo, Consolas, monospace" font-size="9" fill="#5a6068">≈ 3.5 × 2.5 m</text>
+  <!-- Bath 1.5x2.5 @8.5,3 -->
+  <rect x="432" y="324" width="60" height="75" fill="#b9d0cb" fill-opacity="0.55" stroke="#3d5c57" stroke-width="2"/>
+  <text x="462" y="364" text-anchor="middle" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="10" font-weight="600" fill="#1a1c1e">Bath</text>
+
+  <!-- Furniture blocks -->
+  <rect x="112" y="318" width="112" height="30" fill="#8b6b4a" fill-opacity="0.4" stroke="#6a4e34"/>
+  <rect x="140" y="282" width="48" height="24" fill="#8b6b4a" fill-opacity="0.4" stroke="#6a4e34"/>
+  <rect x="316" y="339" width="72" height="30" fill="#8b6b4a" fill-opacity="0.4" stroke="#6a4e34"/>
+  <rect x="324" y="264" width="64" height="24" fill="#8b6b4a" fill-opacity="0.4" stroke="#6a4e34"/>
+  <rect x="188" y="384" width="72" height="60" fill="#8b6b4a" fill-opacity="0.4" stroke="#6a4e34"/>
+  <rect x="348" y="411" width="60" height="48" fill="#8b6b4a" fill-opacity="0.4" stroke="#6a4e34"/>
+
+  <!-- Door markers (orange) / window (cyan) -->
+  <circle cx="140" cy="234" r="5" fill="#e07a2f"/>
+  <circle cx="192" cy="234" r="5" fill="#3aabc9"/>
+  <circle cx="362" cy="234" r="5" fill="#3aabc9"/>
+  <circle cx="292" cy="279" r="5" fill="#e07a2f"/>
+
+  <!-- Dimension line -->
+  <path d="M92 528 H492" stroke="#8b3a2a" stroke-width="1" fill="none"/>
+  <path d="M92 524 V532 M492 524 V532" stroke="#8b3a2a" stroke-width="1"/>
+  <text x="292" y="544" text-anchor="middle" font-family="SF Mono, Menlo, Consolas, monospace" font-size="10" fill="#8b3a2a">≈ 10.0 m</text>
+
+  <!-- Walk Through button -->
+  <rect x="72" y="540" width="200" height="40" rx="10" fill="#1a1c1e"/>
+  <text x="172" y="565" text-anchor="middle" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="600" fill="#f4f5f7">Walk Through</text>
+
+  <!-- Rooms list -->
+  <rect x="612" y="214" width="196" height="300" rx="12" fill="#f7f8fa" stroke="#b8bec6"/>
+  <text x="628" y="242" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="600" fill="#1a1c1e">Rooms</text>
+  <g font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#3a4048">
+    <text x="628" y="270">Living · ≈ 5.0 × 4.5 m</text>
+    <text x="628" y="294">Kitchen · ≈ 3.5 × 3.0 m</text>
+    <text x="628" y="318">Dining · ≈ 3.5 × 2.5 m</text>
+    <text x="628" y="342">Hall · ≈ 2.0 × 3.5 m</text>
+    <text x="628" y="366">Bedroom 1 · ≈ 4.0 × 3.5 m</text>
+    <text x="628" y="390">Bedroom 2 · ≈ 3.5 × 2.5 m</text>
+    <text x="628" y="414">Bath · ≈ 1.5 × 2.5 m</text>
+  </g>
+  <text x="628" y="448" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="10" fill="#6b727a">All dimensions are approximate.</text>
+</svg>

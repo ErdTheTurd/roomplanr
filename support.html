@@ -4,35 +4,37 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Support — Roomplanr</title>
-  <meta name="description" content="Get help with Roomplanr for Apple Vision Pro. Contact support@roomplanr.com or browse the FAQ.">
-  <meta name="theme-color" content="#0e3d6b">
+  <meta name="description" content="Help with Roomplanr for Apple Vision Pro. Email support@roomplanr.com or read the FAQ.">
+  <meta name="theme-color" content="#e4e2dc">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <a class="skip" href="#main">Skip to content</a>
+
   <header class="site-header">
-    <div class="wrap nav">
-      <a class="logo" href="index.html">Roomplanr</a>
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="./">
+        Roomplanr
+        <span class="brand-meta">visionOS</span>
+      </a>
       <ul class="nav-links">
-        <li><a href="index.html#how">How it works</a></li>
-        <li><a href="support.html">Support</a></li>
+        <li><a href="./">Home</a></li>
         <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="support.html" aria-current="page">Support</a></li>
       </ul>
-    </div>
+    </nav>
   </header>
 
-  <main>
-    <section class="page-hero">
-      <div class="wrap">
-        <h1>Support</h1>
-        <p>Help getting started with Roomplanr on Apple Vision Pro.</p>
-      </div>
-    </section>
+  <main id="main">
+    <div class="sheet">
+      <div class="sheet-inner">
+        <article class="page page-narrow">
+          <div class="dim-rule">Support</div>
+          <h1>Support</h1>
+          <p class="lede">Help getting started with Roomplanr on Apple Vision Pro.</p>
 
-    <section class="prose">
-      <div class="wrap">
-        <article>
           <div class="contact-line">
-            <strong>Email us:</strong>
+            <strong>Email:</strong>
             <a href="mailto:support@roomplanr.com">support@roomplanr.com</a>
           </div>
 
@@ -41,37 +43,36 @@
             <details open>
               <summary>How do I get started?</summary>
               <p>
-                Open Roomplanr on Apple Vision Pro and choose one of the three clearly labeled
-                sample plans. Use the 2D top-down preview to confirm the layout, then enter the
-                1:1 mixed-reality walk-through. From there you can adjust wall opacity, switch to
-                knee-high outline mode, and move, rotate, or reset the plan in your space.
+                Open Roomplanr and go to Plan Library. Choose one of the SAMPLE plans —
+                Studio Apartment, 2-Bed Home, or Small Office. Review the 2D preview, then tap
+                Walk Through. From the control strip you can set Wall opacity, switch Full height
+                or Knee-high outline, and move, rotate, or Reset the plan in your space.
               </p>
             </details>
 
             <details>
               <summary>How do I import a JSON floor plan?</summary>
               <p>
-                Use the in-app import option and select a JSON floor plan from your device.
-                After import, review the 2D preview, then open the full-scale walk-through.
-                You can also create simple room plans directly in the app without importing.
+                In Plan Library, tap Import and select a JSON floor plan from your device.
+                Review the 2D preview, then open Walk Through. You can also tap Create to sketch
+                a simple plan with rooms side-by-side (dimensions in meters).
               </p>
             </details>
 
             <details>
-              <summary>Does Roomplanr work offline? What about privacy?</summary>
+              <summary>Does Roomplanr work offline?</summary>
               <p>
-                Yes. Roomplanr works 100% offline—no account and no tracking. Plans are stored
-                locally on your device. See our
-                <a href="privacy.html">privacy policy</a> for details.
+                Yes. Roomplanr works offline with no account and no tracking. Plans stay on your
+                device. See the <a href="privacy.html">privacy policy</a>.
               </p>
             </details>
 
             <details>
               <summary>Are the dimensions accurate?</summary>
               <p>
-                No—not for surveying or construction. Roomplanr is for spatial visualization only.
-                Dimensions are approximate and <strong>not survey-accurate</strong>. Do not rely on
-                Roomplanr for building, legal boundaries, permitting, or precise measurement.
+                No — not for surveying or construction. Roomplanr is for visualization only.
+                Dimensions are approximate and not survey-accurate. Do not rely on it for building,
+                legal boundaries, permitting, or precise measurement.
               </p>
             </details>
           </div>
@@ -79,25 +80,21 @@
           <h2>Still need help?</h2>
           <p>
             Write to
-            <a href="mailto:support@roomplanr.com">support@roomplanr.com</a>
-            and we’ll get back to you as soon as we can.
+            <a href="mailto:support@roomplanr.com">support@roomplanr.com</a>.
           </p>
         </article>
       </div>
-    </section>
+    </div>
   </main>
 
   <footer class="site-footer">
-    <div class="wrap footer-grid">
-      <div class="footer-brand">
-        Roomplanr
-        <span>roomplanr.com · Apple Vision Pro</span>
+    <div class="wrap footer-inner">
+      <p>Roomplanr · Apple Vision Pro</p>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy</a>
+        <a href="support.html">Support</a>
+        <a href="mailto:support@roomplanr.com">support@roomplanr.com</a>
       </div>
-      <ul class="footer-links">
-        <li><a href="privacy.html">Privacy</a></li>
-        <li><a href="support.html">Support</a></li>
-        <li><a href="mailto:support@roomplanr.com">support@roomplanr.com</a></li>
-      </ul>
     </div>
   </footer>
 </body>

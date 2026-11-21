@@ -3,148 +3,153 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Roomplanr — Walk through floor plans at full scale on Apple Vision Pro</title>
-  <meta name="description" content="Roomplanr lets you see floor plans and building designs at true 1:1 scale in mixed reality on Apple Vision Pro. Offline, private, visualization-only.">
-  <meta name="theme-color" content="#0e3d6b">
+  <title>Roomplanr — Floor plans at full scale on Apple Vision Pro</title>
+  <meta name="description" content="Roomplanr shows floor plans at true 1:1 scale in your real room on Apple Vision Pro. Pick a plan, place it on your floor, walk the rooms. Offline, no account.">
+  <meta name="theme-color" content="#e4e2dc">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <a class="skip" href="#main">Skip to content</a>
+
   <header class="site-header">
-    <div class="wrap nav">
-      <a class="logo" href="index.html">Roomplanr</a>
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="./" aria-current="page">
+        Roomplanr
+        <span class="brand-meta">visionOS</span>
+      </a>
       <ul class="nav-links">
-        <li><a href="#how">How it works</a></li>
-        <li><a href="#features">Features</a></li>
+        <li><a href="./" aria-current="page">Home</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
         <li><a href="support.html">Support</a></li>
       </ul>
-    </div>
+    </nav>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="wrap hero-grid">
-        <div>
-          <p class="eyebrow">visionOS · Apple Vision Pro</p>
-          <h1 class="brand">Roomplanr</h1>
-          <p class="lede">
-            See floor plans and building designs at full 1:1 scale in your real space.
-            Walk the room before it’s built—privately, offline, on Apple Vision Pro.
-          </p>
-          <div class="cta-row">
-            <a class="btn" href="#how">See how it works</a>
-            <a class="btn btn-ghost" href="support.html">Support</a>
+  <main id="main">
+    <div class="sheet">
+      <div class="sheet-inner">
+        <section class="hero" aria-labelledby="brand-title">
+          <div class="hero-copy">
+            <p class="wordmark" id="brand-title">Roomplanr</p>
+            <h1>Floor plans at full 1:1 scale in the room you’re standing in.</h1>
+            <p class="lede">Open a plan on Apple Vision Pro, place it on your floor, and walk the rooms before they’re built.</p>
+            <div class="hero-cta">
+              <p class="coming">Coming to Apple Vision Pro</p>
+              <p class="device-note">Offline · No account</p>
+            </div>
+            <div class="title-block" aria-hidden="true">
+              <span><strong>App</strong> Roomplanr</span>
+              <span><strong>Scale</strong> 1:1</span>
+              <span><strong>Platform</strong> Apple Vision Pro</span>
+              <span><strong>Sheet</strong> A-01</span>
+            </div>
           </div>
-          <p class="coming-note">Coming to Apple Vision Pro</p>
-        </div>
+          <figure class="hero-visual">
+            <img
+              src="images/walk-through.svg"
+              width="1100"
+              height="720"
+              alt="Walk Through view: a floor plan placed at full scale in a real room, with controls for wall opacity, Full height or Knee-high outline, move, rotate, and Reset.">
+            <figcaption>Walk Through · mockup</figcaption>
+          </figure>
+        </section>
 
-        <div class="plan-frame" aria-hidden="true">
-          <svg class="plan-svg" viewBox="0 0 480 360" role="img" aria-label="Floor plan outline illustration">
-            <rect class="room-fill" x="48" y="40" width="280" height="200" />
-            <rect class="room-fill" x="328" y="40" width="104" height="120" />
-            <rect class="room-fill" x="48" y="240" width="180" height="80" />
+        <section class="section" id="use" aria-labelledby="use-title">
+          <div class="dim-rule">01 · Use</div>
+          <div class="section-head">
+            <h2 id="use-title">What you do</h2>
+            <p>Three steps. Same labels as in the app.</p>
+          </div>
+          <ol class="flow-list">
+            <li>
+              <h3>01 · Plan Library</h3>
+              <p>Open <strong>Studio Apartment</strong>, <strong>2-Bed Home</strong>, or <strong>Small Office</strong> — each marked SAMPLE — or Import a JSON plan / Create your own.</p>
+            </li>
+            <li>
+              <h3>02 · Preview</h3>
+              <p>Check the top-down 2D plan, room sizes, and layout. Then tap <strong>Walk Through</strong>.</p>
+            </li>
+            <li>
+              <h3>03 · Walk Through</h3>
+              <p>The plan sits on your floor at 1:1. Adjust <strong>Wall opacity</strong>, switch <strong>Full height</strong> or <strong>Knee-high outline</strong>, then move, rotate, or <strong>Reset</strong>.</p>
+            </li>
+          </ol>
+        </section>
 
-            <!-- Outer walls -->
-            <path class="wall" d="M48 40 H432 V160 H328 V240 H228 V320 H48 V40 Z" />
-            <!-- Interior partitions -->
-            <path class="wall" d="M328 40 V160" />
-            <path class="wall" d="M228 240 V320" />
-            <path class="wall" d="M48 240 H228" />
-            <path class="wall" d="M328 160 H228 V240" />
+        <section class="section" id="for" aria-labelledby="for-title">
+          <div class="dim-rule">02 · Audience</div>
+          <div class="section-head">
+            <h2 id="for-title">Who it’s for</h2>
+            <p>People who need to feel a layout before committing.</p>
+          </div>
+          <div class="audience">
+            <p><strong>Remodel</strong> See whether a wall move or open plan still fits the space you have.</p>
+            <p><strong>Build</strong> Walk a sample or imported plan at true size before framing starts.</p>
+            <p><strong>Furniture</strong> Check clearances and circulation with the plan’s furniture blocks in place.</p>
+          </div>
+        </section>
 
-            <!-- Door arcs -->
-            <path class="door" d="M228 240 Q248 240 248 260" />
-            <path class="door" d="M328 100 Q308 100 308 120" />
-            <path class="door" d="M140 40 Q140 60 160 60" />
+        <section class="section" id="screens" aria-labelledby="screens-title">
+          <div class="dim-rule">03 · Screens</div>
+          <div class="section-head">
+            <h2 id="screens-title">The windows you’ll use</h2>
+            <p>Faithful mockups of the real UI — not screenshots from a simulator.</p>
+          </div>
+          <div class="screens">
+            <figure class="screen">
+              <img
+                src="images/plan-library.svg"
+                width="920"
+                height="620"
+                alt="Plan Library window listing Studio Apartment, 2-Bed Home, and Small Office sample plans, with Import, Create, and Settings.">
+              <figcaption>
+                <strong>Plan Library</strong>
+                Browse sample designs or create your own, then walk through at full scale.
+              </figcaption>
+            </figure>
+            <figure class="screen">
+              <img
+                src="images/plan-preview.svg"
+                width="880"
+                height="640"
+                alt="2D preview of the 2-Bed Home sample with labeled rooms Living, Kitchen, Dining, Hall, Bedroom 1, Bedroom 2, and Bath, plus a Walk Through button.">
+              <figcaption>
+                <strong>2D plan preview</strong>
+                Top-down outline with approximate room sizes before you enter Walk Through.
+              </figcaption>
+            </figure>
+            <figure class="screen">
+              <img
+                src="images/walk-through.svg"
+                width="1100"
+                height="720"
+                alt="Walk Through control strip floating in a room: Wall opacity slider, Full height and Knee-high outline, move arrows, rotate, and Reset.">
+              <figcaption>
+                <strong>Walk Through</strong>
+                Mixed reality at 1:1 with the control strip for opacity, wall height, placement, and Exit.
+              </figcaption>
+            </figure>
+          </div>
+        </section>
 
-            <!-- Dimension marks -->
-            <path class="dim" d="M48 28 H432 M48 24 V32 M432 24 V32" />
-            <path class="dim" d="M36 40 V320 M32 40 H40 M32 320 H40" />
-
-            <text class="label" x="160" y="145">LIVING</text>
-            <text class="label" x="352" y="105">BED</text>
-            <text class="label" x="100" y="285">KITCHEN</text>
-            <text class="label" x="210" y="24">12.4 m</text>
-            <text class="label" x="8" y="185" transform="rotate(-90 8 185)">9.1 m</text>
-          </svg>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="how">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>How it works</h2>
-          <p>Three steps from outline to a full-scale walk-through in your space.</p>
-        </div>
-        <div class="steps">
-          <article class="step">
-            <h3>Open a plan</h3>
-            <p>Start with one of three labeled sample plans, import a JSON floor plan, or sketch a simple room in-app.</p>
-          </article>
-          <article class="step">
-            <h3>Preview in 2D</h3>
-            <p>Check the top-down outline, confirm the layout, then place it in your surroundings for mixed reality.</p>
-          </article>
-          <article class="step">
-            <h3>Walk at 1:1</h3>
-            <p>Step through walls at true scale with opacity controls, knee-high outline mode, and move, rotate, and reset.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="features">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>Built for spatial clarity</h2>
-          <p>Everything you need to preview a layout—nothing that tracks you.</p>
-        </div>
-        <div class="features">
-          <article class="feature">
-            <h3>True 1:1 mixed reality</h3>
-            <p>Experience rooms at full scale so proportions, circulation, and furniture clearances feel real before construction.</p>
-          </article>
-          <article class="feature">
-            <h3>100% offline</h3>
-            <p>No account. No cloud sync. No tracking. Plans stay on your device—Roomplanr works without a network.</p>
-          </article>
-          <article class="feature">
-            <h3>Import or create</h3>
-            <p>Bring JSON floor plans or build simple room outlines in-app. Sample plans ship clearly labeled for quick demos.</p>
-          </article>
-          <article class="feature">
-            <h3>Walk-through controls</h3>
-            <p>Adjust wall opacity, switch to knee-high outlines, and move, rotate, or reset placement while you explore.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="honesty" id="honesty">
-      <div class="wrap">
-        <div class="honesty-box">
-          <h2>Visualization only</h2>
-          <p>
-            Roomplanr is for spatial visualization. Dimensions are approximate and
-            <strong>not survey-accurate</strong>. Do not use Roomplanr for construction,
-            legal boundaries, permitting, or precise measurement.
+        <aside class="note" aria-labelledby="note-title">
+          <p id="note-title">
+            <strong>Visualization only.</strong>
+            Dimensions are approximate and not survey-accurate. Don’t use Roomplanr for construction, permitting, or legal measurements.
           </p>
-        </div>
+        </aside>
       </div>
-    </section>
+    </div>
   </main>
 
   <footer class="site-footer">
-    <div class="wrap footer-grid">
-      <div class="footer-brand">
-        Roomplanr
-        <span>roomplanr.com · Apple Vision Pro</span>
+    <div class="wrap footer-inner">
+      <p>Roomplanr · Apple Vision Pro</p>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy</a>
+        <a href="support.html">Support</a>
+        <a href="mailto:support@roomplanr.com">support@roomplanr.com</a>
       </div>
-      <ul class="footer-links">
-        <li><a href="privacy.html">Privacy</a></li>
-        <li><a href="support.html">Support</a></li>
-        <li><a href="mailto:support@roomplanr.com">support@roomplanr.com</a></li>
-      </ul>
     </div>
   </footer>
 </body>

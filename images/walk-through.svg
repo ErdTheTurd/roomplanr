@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 720" role="img" aria-labelledby="walk-title walk-desc">
+  <title id="walk-title">Walk Through view with controls</title>
+  <desc id="walk-desc">Mixed-reality walk-through of a floor plan at full scale in a room, with the Walk Through control strip showing wall opacity, Full height and Knee-high outline, move, rotate, and Reset.</desc>
+  <defs>
+    <linearGradient id="roomFloor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d8d2c6"/>
+      <stop offset="100%" stop-color="#b8b0a2"/>
+    </linearGradient>
+    <linearGradient id="roomWall" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ebe6dc"/>
+      <stop offset="100%" stop-color="#d4cec2"/>
+    </linearGradient>
+    <linearGradient id="ctrlGlass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f6f7f9" stop-opacity="0.94"/>
+      <stop offset="100%" stop-color="#e3e6eb" stop-opacity="0.92"/>
+    </linearGradient>
+    <filter id="ctrlShadow" x="-10%" y="-15%" width="120%" height="140%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#1a1c1e" flood-opacity="0.28"/>
+    </filter>
+    <filter id="ghostWall" x="-5%" y="-5%" width="110%" height="110%">
+      <feGaussianBlur stdDeviation="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Real room environment -->
+  <rect width="1100" height="720" fill="#9aa3ae"/>
+  <!-- Ceiling / back wall -->
+  <path d="M0 0 H1100 V320 L780 200 H320 L0 320 Z" fill="url(#roomWall)"/>
+  <!-- Side walls -->
+  <path d="M0 320 L320 200 V560 L0 720 Z" fill="#cfc8bb"/>
+  <path d="M1100 320 L780 200 V560 L1100 720 Z" fill="#c2bbb0"/>
+  <!-- Floor -->
+  <path d="M0 720 L320 560 H780 L1100 720 Z" fill="url(#roomFloor)"/>
+  <!-- Floor boards -->
+  <g stroke="#a89f90" stroke-width="1" opacity="0.45">
+    <path d="M40 700 L360 568"/>
+    <path d="M120 708 L420 572"/>
+    <path d="M220 712 L500 576"/>
+    <path d="M340 716 L560 580"/>
+    <path d="M480 718 L620 584"/>
+    <path d="M620 716 L700 588"/>
+    <path d="M760 712 L780 592"/>
+    <path d="M860 706 L820 586"/>
+    <path d="M960 698 L860 580"/>
+    <path d="M1040 688 L900 574"/>
+  </g>
+  <!-- Window on back wall -->
+  <rect x="430" y="88" width="240" height="130" rx="4" fill="#8fb8c9" stroke="#7a7368" stroke-width="3"/>
+  <path d="M550 88 V218 M430 153 H670" stroke="#7a7368" stroke-width="2"/>
+  <rect x="430" y="88" width="240" height="28" fill="#fff6" opacity="0.25"/>
+
+  <!-- Ghost floor plan walls at 1:1 in the room (perspective-ish) -->
+  <g opacity="0.55" stroke="#2f5c56" stroke-width="3" fill="#5a9a8a" fill-opacity="0.18">
+    <!-- Living volume -->
+    <path d="M300 540 L300 360 L520 360 L520 540 Z"/>
+    <!-- Kitchen -->
+    <path d="M520 540 L520 400 L640 400 L640 540 Z"/>
+    <!-- Hall / bedroom suggestion -->
+    <path d="M300 540 L300 580 L420 580 L420 540"/>
+    <path d="M420 540 L420 580 L560 580 L560 540"/>
+  </g>
+  <!-- Vertical wall ghosts -->
+  <g opacity="0.4" fill="#4a7a72" filter="url(#ghostWall)">
+    <path d="M300 360 L300 540 L318 534 L318 366 Z"/>
+    <path d="M520 360 L520 540 L538 534 L538 366 Z"/>
+    <path d="M640 400 L640 540 L658 534 L658 406 Z"/>
+    <path d="M300 360 H520 L518 378 H302 Z"/>
+  </g>
+  <!-- Door opening gap -->
+  <path d="M360 540 V500" stroke="#e07a2f" stroke-width="4" opacity="0.7"/>
+  <text x="430" y="430" text-anchor="middle" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#1a1c1e" opacity="0.55">Living</text>
+  <text x="580" y="470" text-anchor="middle" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="12" font-weight="600" fill="#1a1c1e" opacity="0.5">Kitchen</text>
+
+  <!-- Floating control strip (visionOS window) -->
+  <g filter="url(#ctrlShadow)" transform="translate(300, 470)">
+    <rect x="0" y="0" width="500" height="210" rx="22" fill="url(#ctrlGlass)" stroke="#9aa3ae" stroke-width="1.2"/>
+
+    <!-- Header -->
+    <text x="22" y="34" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="600" fill="#1a1c1e">Walk Through</text>
+    <circle cx="468" cy="28" r="11" fill="#dfe3e8" stroke="#9aa3ae"/>
+    <path d="M463 23 L473 33 M473 23 L463 33" stroke="#3a4048" stroke-width="1.6" stroke-linecap="round"/>
+
+    <text x="22" y="56" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#5a6068">Visualization only — measurements are approximate, not survey-accurate.</text>
+    <text x="22" y="78" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#1a1c1e">2-Bed Home</text>
+
+    <!-- Wall opacity -->
+    <text x="22" y="104" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#5a6068">Wall opacity</text>
+    <rect x="22" y="112" width="456" height="6" rx="3" fill="#c5cad2"/>
+    <rect x="22" y="112" width="200" height="6" rx="3" fill="#3d5c57"/>
+    <circle cx="222" cy="115" r="8" fill="#f7f8fa" stroke="#3d5c57" stroke-width="2"/>
+
+    <!-- Wall height segmented -->
+    <rect x="22" y="134" width="456" height="28" rx="8" fill="#dfe3e8"/>
+    <rect x="24" y="136" width="224" height="24" rx="6" fill="#f7f8fa" stroke="#9aa3ae"/>
+    <text x="136" y="152" text-anchor="middle" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="12" font-weight="600" fill="#1a1c1e">Full height</text>
+    <text x="360" y="152" text-anchor="middle" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="12" fill="#5a6068">Knee-high outline</text>
+
+    <!-- Move / rotate / reset -->
+    <g transform="translate(22, 174)">
+      <circle cx="14" cy="14" r="14" fill="#dfe3e8" stroke="#9aa3ae"/>
+      <path d="M17 14 H9 M12 10 L8 14 L12 18" fill="none" stroke="#1a1c1e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="48" cy="14" r="14" fill="#dfe3e8" stroke="#9aa3ae"/>
+      <path d="M48 19 V9 M44 13 L48 9 L52 13" fill="none" stroke="#1a1c1e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="82" cy="14" r="14" fill="#dfe3e8" stroke="#9aa3ae"/>
+      <path d="M48 19" opacity="0"/><path d="M82 9 V19 M78 15 L82 19 L86 15" fill="none" stroke="#1a1c1e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="116" cy="14" r="14" fill="#dfe3e8" stroke="#9aa3ae"/>
+      <path d="M113 14 H121 M118 10 L122 14 L118 18" fill="none" stroke="#1a1c1e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+      <circle cx="170" cy="14" r="14" fill="#dfe3e8" stroke="#9aa3ae"/>
+      <path d="M176 10 A8 8 0 1 0 176 18" fill="none" stroke="#1a1c1e" stroke-width="1.5"/>
+      <path d="M176 7 L176 12 L181 12" fill="none" stroke="#1a1c1e" stroke-width="1.5" stroke-linecap="round"/>
+
+      <circle cx="204" cy="14" r="14" fill="#dfe3e8" stroke="#9aa3ae"/>
+      <path d="M198 10 A8 8 0 1 1 198 18" fill="none" stroke="#1a1c1e" stroke-width="1.5"/>
+      <path d="M198 7 L198 12 L193 12" fill="none" stroke="#1a1c1e" stroke-width="1.5" stroke-linecap="round"/>
+
+      <rect x="240" y="0" width="88" height="28" rx="8" fill="#dfe3e8" stroke="#9aa3ae"/>
+      <text x="284" y="18" text-anchor="middle" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="12" font-weight="600" fill="#1a1c1e">Reset</text>
+    </g>
+  </g>
+</svg>
